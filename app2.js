@@ -60,7 +60,7 @@ async function getErc20Balance(erc20Address, abi, walletAddress) {
 
 async function getAllErc20Balance(erc20TokenList) {
     let erc20TokenBalances = [];
-    for (i = 0; i < erc20TokenList.length; i++) {
+    for (let i = 0; i < erc20TokenList.length; i++) {
         erc20TokenBalances.push(await getErc20Balance(erc20TokenList[i], erc20ABI, document.forms['searchForm']['walletAddress'].value));
     }
     return erc20TokenBalances;
@@ -80,7 +80,7 @@ async function getAddressBalance() {
         let ulTokenList = document.getElementById('tokenList');
         let tokenListItems = document.getElementsByClassName('list-group-item');
 
-        for (i = 0; i < erc20Balances.length; i++) {
+        for (let i = 0; i < erc20Balances.length; i++) {
             let li = document.createElement('li');
             li.classList.add('list-group-item');
             li.classList.add('d-flex');
